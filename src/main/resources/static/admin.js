@@ -35,10 +35,10 @@ fetch("http://localhost:8080/api/admin/current").then(res => res.json())
     })
 
 function showEmailAndRoles(user) {
-    const emailElement = document.getElementById("emailAuth");
+    const usernameElement = document.getElementById("usernameAuth");
     const rolesElement = document.getElementById("rolesAuth");
     const rolesString = user.roles.map(role => role.name.replace("ROLE_", "")).join(", ");
-    emailElement.textContent = user.email;
+    usernameElement.textContent = user.username;
     rolesElement.textContent = rolesString;
 }
 
